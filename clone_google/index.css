@@ -1,18 +1,18 @@
 /* MAIN */
 
 .main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    display: flex;
+}
+
+.top_blank {
+    display: flex;
 }
 
 
 /* LOGO */
 
 .logo {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    text-align: center;
 }
 
 
