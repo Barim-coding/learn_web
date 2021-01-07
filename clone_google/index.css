@@ -6,6 +6,7 @@
 .logo {
     text-align: center;
     margin-top: 20%;
+    image-resolution: auto;
 }
 
 
@@ -48,26 +49,49 @@ img#icon_user {
 /* BOTTOM NAVIGATION BAR */
 
 .bottom_nav {
+    display: flex;
     position: fixed;
-    bottom: 0px;
+    bottom: 5.25%;
+    left: 0px;
     width: 100%;
+    height: 5.25%;
     background-color: #f2f2f2;
-    border: 1px soild #dadce0;
+    border-bottom: 1px solid rgb(192, 192, 192);
 }
 
 .region {
     text-align: left;
+    align-items: center;
+    border-bottom: 1px solid #f2f2f2;
 }
 
-ul#bottom_left_nav li {
-    list-style-type: none;
-    display: inline;
-    text-align: left;
-    float: right;
+.bottom_nav_bar {
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    left: 0px;
+    width: 100%;
+    height: 5.25%;
+    background-color: #f2f2f2;
 }
 
-ul#bottom_right_nav li {
+.bottom_nav_contents {
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+    padding-right: 5%;
+}
+
+.bottom_nav_contents li {
+    display: flex;
     list-style-type: none;
-    display: inline;
-    text-align: right;
+    text-align: center;
+    float: left;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+li#bot_nav_blank {
+    width: 20%;
+    padding-left: 30px;
 }
