@@ -37,6 +37,7 @@ img#icon_menu {
     max-width: 17px;
     width: inherit;
     height: auto;
+    margin-left: 5px;
 }
 
 img#icon_user {
@@ -53,14 +54,40 @@ img#icon_user {
     max-width: 100%;
     width: inherit;
     height: auto;
+    text-align: center;
 }
 
 img#search_icon {
+    max-width: 22px;
+    width: inherit;
+    height: auto;
+    padding-right: 20px;
+}
+
+img#input_tool {
     max-width: 25px;
     width: inherit;
     height: auto;
     padding-right: 20px;
 }
+
+img#microphone {
+    max-width: 25px;
+    width: inherit;
+    height: auto;
+    padding-right: 20px;
+}
+
+.button {
+    padding-top: 35px;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
+
+input#Google_search {}
+
+button#Im_feeling_good {}
 
 
 /* BOTTOM NAVIGATION BAR */
