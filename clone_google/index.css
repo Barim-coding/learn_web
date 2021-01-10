@@ -57,25 +57,48 @@ img#icon_user {
     text-align: center;
 }
 
+.search_bar {
+    margin-left: 35%;
+    margin-right: 35%;
+    max-width: 30%;
+    height: 40px;
+    text-align: center;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 40px 40px 40px 40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input:focus {
+    outline: none;
+}
+
+input#search_text {
+    border: none;
+    margin-top: 5px;
+    width: 75%;
+    height: 30px;
+    font-size: 20px;
+}
+
 img#search_icon {
-    max-width: 22px;
+    max-width: 14px;
     width: inherit;
     height: auto;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 img#input_tool {
-    max-width: 25px;
+    max-width: 20px;
     width: inherit;
     height: auto;
-    padding-right: 20px;
+    padding-right: 15px;
 }
 
 img#microphone {
-    max-width: 25px;
+    max-width: 20px;
     width: inherit;
     height: auto;
-    padding-right: 20px;
 }
 
 .button {
@@ -85,9 +108,19 @@ img#microphone {
     height: 40px;
 }
 
-input#Google_search {}
+input#Google_search {
+    width: 110px;
+    height: 30px;
+    border: none;
+    background-color: #f6f6f6;
+}
 
-button#Im_feeling_good {}
+button#Im_feeling_lucky {
+    width: 140px;
+    height: 30px;
+    border: none;
+    background-color: #f6f6f6;
+}
 
 
 /* BOTTOM NAVIGATION BAR */
