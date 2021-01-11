@@ -8,12 +8,15 @@
         Gragoole
     </title>
     <link rel="stylesheet" href="../learn_web/clone_google/index.css">
+    <script src="../learn_web/index.js"></script>
+
 </head>
+
 
 <body>
     <div class="top_nav">
         <ul id="top_nav_ul">
-            <li><a href="#">Gmail</a></li>
+            <li><a href="https://mail.google.com/mail">Gmail</a></li>
             <li><a href="#">이미지</a></li>
             <li>
                 <a href="#"><img id="icon_menu" src="../learn_web/clone_google/image/index/menu.png" alt="menu"></a>
@@ -29,7 +32,9 @@
     <div class="search">
         <div class="search_bar">
             <img id="search_icon" src="../learn_web/clone_google/image/index/search_icon.png" alt="search_icon">
-            <input id="search_text" type="text">
+            <form id="text" action="https://www.google.com/search" method="GET">
+                <input type="text" name="q" maxlength=255 autocomplete="off">
+            </form>
             <img id="input_tool" src="../learn_web/clone_google/image/index/keyboard.png" alt="input_tool">
             <img id="microphone" src="../learn_web/clone_google/image/index/microphone.png" alt="microphone">
         </div>
@@ -44,16 +49,16 @@
         </div>
         <div class="bottom_nav_bar">
             <ul class="bottom_left_nav_contents">
-                <li><a href="#">Google의 정보</a></li>
-                <li><a href="#">광고</a></li>
-                <li><a href="#">비지니스</a></li>
-                <li><a href="#">검색의 원리</a></li>
+                <li><a href="https://about.google/?utm_source=google-KR&utm_medium=referral&utm_campaign=hp-footer&fg=1">Google의 정보</a></li>
+                <li><a href="https://ads.google.com/intl/ko_kr/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">광고</a></li>
+                <li><a href="https://www.google.com/intl/ko_kr/business/">비지니스</a></li>
+                <li><a href="https://www.google.com/search/howsearchworks/?fg=1">검색의 원리</a></li>
             </ul>
             <ul class="bottom_right_nav_contents">
 
                 <li><a href="#">설정</a></li>
-                <li><a href="#">약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="https://policies.google.com/terms?hl=ko&fg=1">약관</a></li>
+                <li><a href="https://policies.google.com/privacy?hl=ko&fg=1">개인정보처리방침</a></li>
             </ul>
         </div>
     </div>
