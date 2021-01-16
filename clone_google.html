@@ -8,12 +8,13 @@
         Gragoole
     </title>
     <link rel="stylesheet" href="../learn_web/clone_google/clone_google_index.css">
-    <script src="../learn_web/index.js"></script>
+
 
 </head>
 
 
 <body>
+    <script src="../learn_web/index.js"></script>
     <div class="top_nav">
         <ul id="top_nav_ul">
             <li><a href="https://mail.google.com/mail">Gmail</a></li>
@@ -32,7 +33,7 @@
     <div class="search">
         <div class="search_bar">
             <img id="search_icon" src="../learn_web/clone_google/image/index/search_icon.png" alt="search_icon">
-            <form id="text" action="https://www.google.com/search" method="GET">
+            <form class="text" action="https://www.google.com/search" method="GET">
                 <input type="text" name="q" maxlength=255 autocomplete="off">
             </form>
             <img id="input_tool" src="../learn_web/clone_google/image/index/keyboard.png" alt="input_tool">
@@ -40,8 +41,8 @@
         </div>
     </div>
     <div class="button">
-        <form id="button" action="https://www.google.com/search" method="GET">
-            <button id="Google_search" type="submit">Google 검색</button>
+        <form class="search_button">
+            <button class="Google_search" type="submit">Google 검색</button>
         </form>
         <button id="Im_feeling_lucky" onclick="location.href='https://www.google.com/doodles'">I'm Feeling Lucky</button>
     </div>

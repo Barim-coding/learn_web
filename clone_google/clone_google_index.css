@@ -133,7 +133,7 @@ img#microphone {
     justify-content: center;
 }
 
-button#Google_search {
+.Google_search {
     display: inline;
     text-align: center;
     width: 110px;
