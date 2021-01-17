@@ -14,7 +14,7 @@
 
 
 <body>
-    <script src="../learn_web/index.js"></script>
+    <script src="../learn_web/clone_google_index.js"></script>
     <div class="top_nav">
         <ul id="top_nav_ul">
             <li><a href="https://mail.google.com/mail">Gmail</a></li>
@@ -35,15 +35,17 @@
             <img id="search_icon" src="../learn_web/clone_google/image/index/search_icon.png" alt="search_icon">
             <form class="text" action="https://www.google.com/search" method="GET">
                 <input type="text" name="q" maxlength=255 autocomplete="off">
+                <!-- <button class="Google_search" type="submit">Google 검색</button> -->
             </form>
             <img id="input_tool" src="../learn_web/clone_google/image/index/keyboard.png" alt="input_tool">
             <img id="microphone" src="../learn_web/clone_google/image/index/microphone.png" alt="microphone">
         </div>
     </div>
     <div class="button">
-        <form class="search_button">
-            <button class="Google_search" type="submit">Google 검색</button>
-        </form>
+        <!-- <form class="search_button"> -->
+        <!-- <input class="Google_search" type="submit" value="Google 검색" onclick="enterSearch()"> -->
+        <button class="Google_search" type="submit" onclick="enterSearch()">Google 검색</button>
+        <!-- </form> -->
         <button id="Im_feeling_lucky" onclick="location.href='https://www.google.com/doodles'">I'm Feeling Lucky</button>
     </div>
     <div class="bottom_nav">
