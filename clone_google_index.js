@@ -1,40 +1,22 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     if (document.getElementById("myInput").value.length > 1) {
-//         document.getElementById("header").className = "hideHeader";
-//     } else {
-//         ContactsearchFX();
-//         document.getElementById('myInput').addEventListener('input', ContactsearchFX);
-//     }
-// });
+$(document).ready(function() {
+    var search = function() {
+        var url = 'https://www.google.com/search?q=' + document.getElementById('search_text').value;
+        window.open(url, 'google');
+    };
 
-// const Searching = Search.prototype;
+    var doodle = function() {
+        url = 'https://www.google.com/doodles'
+        window.open(url, 'google')
 
-// function Search() {
-//     this.keyword = document.querySelector('input[name="q"]');
-//     this.button = document.querySelector('.google_search')
-//     this.form = document.querySelector('.text');
+    };
 
+    $(".gsearch").click(search);
+    $(".doodle").click(doodle);
 
-//     this.Engine();
-// }
+    $("#text").keypress(function(e) {
+        if (e.which == 13) {
+            search();
+        }
+    });
 
-// Searching.Engine = function() {
-//     this.form.addEventListener('submit', e => {
-//         e.preventDefault();
-
-//         let keyword = this.keyword.value;
-
-//         location.href = 'https://www.google.co.kr/search?q=' + keyword;
-//     });
-
-// }
-// new Search();
-
-
-
-
-function enterSearch() {
-    var target = document.getElementsByName("q").value;
-
-    location.href = "http://www.google.co.kr/search?" + target;
-}
+});

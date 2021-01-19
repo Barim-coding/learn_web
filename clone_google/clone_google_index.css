@@ -71,6 +71,10 @@ img#icon_user {
     text-align: center;
 }
 
+.search_div {
+    text-align: center;
+}
+
 .search_bar {
     display: inline-flex;
     max-width: 100%;
@@ -83,17 +87,18 @@ img#icon_user {
 }
 
 .search_button {
-    margin-top: 35px;
+    margin-top: 27px;
     text-align: center;
     vertical-align: middle;
-    width: 100%;
+    max-width: 100%;
     height: 50px;
     display: inline-flex;
     justify-content: center;
+    position: relative;
 }
 
 .Google_search {
-    display: inline;
+    float: left;
     width: 110px;
     height: 35px;
     border: none;
@@ -101,8 +106,12 @@ img#icon_user {
     margin-right: 15px;
 }
 
+.doodle {
+    position: absolute;
+    text-align: center;
+}
+
 .Im_feeling_lucky {
-    display: inline;
     width: 140px;
     height: 35px;
     border: none;
