@@ -11,20 +11,79 @@
 
 <body>
     <script>
+        function changeBackgroundColor() {
+            var target = document.querySelector('body');
+            var id = document.querySelector('#switch_function')
+            if (id.value == 'night') {
+                var target = document.querySelector('body');
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                id.value = 'day';
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                id.value = 'night';
+            };
+        };
     </script>
 
+
+    <p>alert</p>
     <input type="button" value="hi" onclick="alert('hi')">
+    <br>
+
+    <p>onchange</p>
     <input type="text" onchange="alert('changed')">
+    <br>
 
+    <p>onkeydown</p>
     <input type="text" onkeydown="alert('key down')">
+    <br>
 
 
+    <p>change backgroundColor</p>
     <input type="button" value="night" onclick="document.querySelector('body').style.backgroundColor='black';
     document.querySelector('body').style.color='white';">
     <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';">
+    <br>
+    <br>
+
+    <p>one button change backgroundColor</p>
+    <input type="button" id="switch" value="night" onclick="
+    if(document.querySelector('#switch').value=='night'){
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        document.querySelector('#switch').value='day';
+    }
+    else{
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';
+        document.querySelector('#switch').value='night';
+    };">
+    <br>
+
+    <p>one button change backgroundColor refactoring version</p>
+    <input type="button" id="switch_this" value="night" onclick="
+    var target=document.querySelector('body');
+    if(this.value=='night'){
+        var target=document.querySelector('body');
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        this.value='day';
+    }
+    else{
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        this.value='night';
+    };">
+    <br>
+
+    <p>one button change backgroundColor function version</p>
+    <input type="button" id="switch_function" value="night" onclick="changeBackgroundColor();">
 
 
 
+</body>
 
 </html>
