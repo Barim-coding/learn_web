@@ -15,7 +15,6 @@
             var target = document.querySelector('body');
             var id = document.querySelector('#switch_function')
             if (id.value == 'night') {
-                var target = document.querySelector('body');
                 target.style.backgroundColor = 'black';
                 target.style.color = 'white';
                 id.value = 'day';
@@ -25,20 +24,67 @@
                 id.value = 'night';
             };
         };
+
+        function docuWriteByWhile(num) {
+            var num;
+            var i = 0;
+            while (i <= num) {
+                document.write('<li>', i, '</li>');
+                i++;
+            };
+        };
+
+        function arrayWithWhileByFunction(arr) {
+            var arr;
+            var i = 0;
+            while (i < arr.length) {
+                document.write('<li>', arr[i], '</li>');
+                i++
+            };
+        };
+
+        function changeBackgroundColorAndLiColor() {
+            var target = document.querySelector('body');
+            var id = document.querySelector('#switch_color')
+            var liList = document.querySelectorAll('li');
+            var i = 0;
+            if (id.value == 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                id.value = 'day';
+                while (i < liList.length) {
+                    liList[i].style.color = 'powderblue';
+                    i++;
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                id.value = 'night';
+                while (i < liList.length) {
+                    liList[i].style.color = 'black';
+                    i++;
+                }
+            };
+        };
     </script>
 
 
     <p>alert</p>
     <input type="button" value="hi" onclick="alert('hi')">
     <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
     <p>onchange</p>
     <input type="text" onchange="alert('changed')">
     <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
     <p>onkeydown</p>
     <input type="text" onkeydown="alert('key down')">
     <br>
+    <h3>-----------------------------------------------------------------</h3>
 
 
     <p>change backgroundColor</p>
@@ -47,7 +93,8 @@
     <input type="button" value="day" onclick="document.querySelector('body').style.backgroundColor='white';
     document.querySelector('body').style.color='black';">
     <br>
-    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
     <p>one button change backgroundColor</p>
     <input type="button" id="switch" value="night" onclick="
@@ -62,6 +109,8 @@
         document.querySelector('#switch').value='night';
     };">
     <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
     <p>one button change backgroundColor refactoring version</p>
     <input type="button" id="switch_this" value="night" onclick="
@@ -78,9 +127,71 @@
         this.value='night';
     };">
     <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
     <p>one button change backgroundColor function version</p>
     <input type="button" id="switch_function" value="night" onclick="changeBackgroundColor();">
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>Loop test with while</p>
+    <ul>
+        <script>
+            var i = 0;
+            while (i < 3) {
+                document.write('<li>', i, '</li>');
+                i++;
+            };
+        </script>
+    </ul>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>Loop test with function</p>
+    <ul>
+        <script>
+            docuWriteByWhile(3);
+        </script>
+    </ul>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>Loop with Array</p>
+    <ul>
+        <script>
+            var testArr1 = ['a', 'b', 'c', 'd'];
+            var i = 0;
+
+            while (i < testArr1.length) {
+                document.write('<li>', testArr1[i], '</li>');
+                i++;
+            };
+        </script>
+    </ul>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>Loop with Array</p>
+    <ul>
+        <script>
+            var testArr2 = ['a', 'b', 'c', 'd'];
+            arrayWithWhileByFunction(testArr2);
+        </script>
+    </ul>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>backgroundColor = black , li color = powderblue with function</p>
+    <input type="button" id="switch_color" value="night" onclick="changeBackgroundColorAndLiColor();">
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
 
 
 
