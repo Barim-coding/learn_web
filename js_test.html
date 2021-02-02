@@ -52,18 +52,21 @@
                 target.style.backgroundColor = 'black';
                 target.style.color = 'white';
                 id.value = 'day';
-                while (i < liList.length) {
-                    liList[i].style.color = 'powderblue';
-                    i++;
-                }
+                setLiColor('powderblue');
             } else {
                 target.style.backgroundColor = 'white';
                 target.style.color = 'black';
                 id.value = 'night';
-                while (i < liList.length) {
-                    liList[i].style.color = 'black';
-                    i++;
-                }
+                setLiColor('black');
+            };
+        };
+
+        function setLiColor(color) {
+            var liList = document.querySelectorAll('li');
+            var i = 1;
+            while (i < liList.length) {
+                liList[i].style.color = color;
+                i++;
             };
         };
     </script>
@@ -193,7 +196,8 @@
     <h3>-----------------------------------------------------------------</h3>
 
 
-
+    <p>object</p>
+    <a href="../js_test_object.html">object test</a>
 
 </body>
 
