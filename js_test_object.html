@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="kr">
 
 <head>
     <meta charset="utf-8">
@@ -40,6 +40,7 @@
     <br>
     <h3>-----------------------------------------------------------------</h3>
 
+
     <p>property and method</p>
     <script>
         alpha.showAll = function() {
@@ -48,6 +49,98 @@
             };
         };
         alpha.showAll();
+    </script>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>night and day button with object</p>
+    <input type="button" id="DayAndNight" value="night" onclick="NightAndDay();">
+    <ul>
+        <li>this</li>
+        <li>is</li>
+        <li>a</li>
+        <li>test</li>
+    </ul>
+    <script>
+        var Background = {
+            setBackgroundColor: function(color) {
+                document.querySelector('body').style.backgroundColor = color;
+            },
+            setColor: function(color) {
+                document.querySelector('body').style.color = color;
+            }
+        };
+
+        var Li = {
+            setLiColor: function(color) {
+                var liList = document.querySelectorAll('li');
+                var i = 0;
+                while (i < liList.length) {
+                    liList[i].style.color = color;
+                    i++;
+                };
+            }
+        };
+
+        function NightAndDay() {
+            var id = document.querySelector('#DayAndNight');
+            if (id.value == 'night') {
+                Background.setColor('white');
+                Background.setBackgroundColor('black');
+                Li.setLiColor('powderblue');
+                id.value = 'day';
+            } else {
+                Background.setBackgroundColor('white');
+                Background.setColor('black');
+                Li.setLiColor('black');
+                id.value = 'night';
+            };
+        };
+    </script>
+    <br>
+    <h3>-----------------------------------------------------------------</h3>
+
+
+    <p>night and day button with jQurry</p>
+    <input type="button" id="switch_jQ" value="night" onclick="NightAndDay();">
+    <ul>
+        <li>this</li>
+        <li>is</li>
+        <li>a</li>
+        <li>test</li>
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var Background = {
+            setBackgroundColor: function(color) {
+                $('body').css('backgroundColor', color);
+            },
+            setColor: function(color) {
+                $('body').css('color', color);
+            }
+        };
+
+        var Li = {
+            setLiColor: function(color) {
+                $('li').css('color', color);
+            }
+        };
+
+        function NightAndDay() {
+            var id = document.querySelector('#switch_jQ');
+            if (id.value == 'night') {
+                Background.setColor('white');
+                Background.setBackgroundColor('black');
+                Li.setLiColor('powderblue');
+                id.value = 'day';
+            } else {
+                Background.setBackgroundColor('white');
+                Background.setColor('black');
+                Li.setLiColor('black');
+                id.value = 'night';
+            };
+        };
     </script>
     <br>
     <h3>-----------------------------------------------------------------</h3>
