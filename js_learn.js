@@ -156,5 +156,96 @@ function calculate(command, a, b) {
             console.log(a / b);
         case 'multiply':
             console.log(a * b);
+        default:
+            throw Error('unknown command');
+        case
     };
 };
+
+console.log('------------------------------------------------------');
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    speack() {
+        console.log(`${this.name}: hello!`);
+        console.log(`${this.name}'s age: ${this.age}`)
+    }
+}
+
+const Barim = new Person('Gradate', 25);
+Barim.speack();
+
+console.log('------------------------------------------------------');
+
+class User {
+    constructor(firstname, lastname, age) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+    }
+
+    get age() { return this._age; }
+
+    set age(value) { this._age = value < 0 ? 0 : value; }
+}
+
+const user1 = new User('JeongHo', 'Jeong', -1);
+console.log(user1.age);
+
+console.log('------------------------------------------------------');
+
+class PostName {
+    static callName = 'practice static';
+
+    constructor(postAlpha) {
+        this.postAlpha = postAlpha;
+    }
+
+    static printName() { console.log(PostName.callName); }
+}
+
+const hello1 = new PostName('A');
+const hello2 = new PostName('B');
+console.log(PostName.callName);
+PostName.printName();
+
+console.log('------------------------------------------------------');
+
+class Shape {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    draw() { console.log(`draw using ${this.color}`); }
+    area() { return this.width * this.height; }
+}
+
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+    area() { return (this.width * this.height) / 2; }
+}
+
+const rec1 = new Rectangle(10, 10, 'black');
+rec1.draw();
+console.log(`rec1's area: ${rec1.area()}`);
+
+const tri1 = new Triangle(20, 20, 'white');
+tri1.draw();
+console.log(`tri1's area: ${tri1.area()}`);
+
+console.log('------------------------------------------------------');
+
+console.log(rec1 instanceof Rectangle);
+console.log(tri1 instanceof Rectangle);
+console.log(rec1 instanceof Triangle);
+console.log(tri1 instanceof Triangle);
+console.log(rec1 instanceof Shape);
+console.log(tri1 instanceof Shape);
+console.log(rec1 instanceof Object);
+console.log(tri1 instanceof Object);
+
+console.log('------------------------------------------------------');

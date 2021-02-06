@@ -242,6 +242,59 @@
     <br>
 
 
+    <p>--------------------------------------------------------------------------------------------------------------</p>
+    <br>
+    <br>
+
+    <h2>Class & Object</h2>
+    <br>
+
+    <h3>class</h3>
+    <p>ES6에 추가됨. 문법만 class가 추가된 것 뿐, 기존 기능을 활용</p>
+    <p>Template >> no data. only template >> 정의만 하는 것. 실제로 메모리에 올라가지 않음.</p>
+    <p>class에 data를 넣어 object를 만드는 것. >> instance</p>
+    <br>
+
+    <h3>Class declaration</h3>
+    <p>class 안에는 field, method가 있음.</p>
+    <p>class class-name{constructor(parameter){fields} method-name(){}}</p>
+    <p>새로운 object 선언 >> new</p>
+    <br>
+
+    <h3>Getter & Setter</h3>
+    <p>class를 생성하고 사용할 때 잘못된 값을 입력하더라도 방어적으로 처리하게 해주는 것.</p>
+    <p>get parameter(){} 으로 return, set parameter(value){} 로 깂 살장 가능 >> 잘못된 입력 바로잡기 가능</p>
+    <p>set parameter(value){} 은 값을 설정하는 것이므로 value가 필수</p>
+    <p>if) class의 변수 = get의 parameter = set의 parameter 인 경우</p>
+    <p> >> set의 this.parameter = value; 와 get의 return this.parameter; 로 인해 무한 호출, call stack error 발생</p>
+    <p>따라서 get과 set에서 parameter의 이름을 변경 ~ _ 를 붙이는게 일반적. >> 해당 class 에서만 호출</p>
+    <br>
+
+    <h3>Static properties and methods</h3>
+    <p>class가 가지는 고유한 값 또는 data에 상관 없이 동일하게 동작하는 method를 정의할 때 사용</p>
+    <p>object, 들어오는 data에 상관없이 class에서 사용할 때 >> 메모리의 사용을 줄이게끔</p>
+    <p>class class-name{ static ; constructor (){}}</p>
+    <p>static 으로 선언된 내용은 호출하려면 constructor가 아닌 class를 이용해 호출해야함.</p>
+    <p>class-name.static-name 의 형태</p>
+    <br>
+
+    <h3>Inheritance</h3>
+    <p>각 class 에서 동일하게 나타나는 것을 class로 선언 후 method를 생성, 그리고 이를 상속하는 class 생성.</p>
+    <p>class parent-class{} // class child-class extends parent-class{} 형태로 선언</p>
+    <p>만약 자식 class가 사용할 method에 수정이 필요할 경우 자식 class에서 해당 부분을 재정의 가능 >> overwriting >> 다형성</p>
+    <p>overwriting 하면 부모 class의 함수는 호출 X, 자식 class에 overwriting 한 부분을 호출하기 때문</p>
+    <p>overwriting-method(){super.parent-class-method();} 를 하면 overwriting 한 내용 + 부모 class의 내용 모두 호출</p>
+    <br>
+
+    <h3>instanceOf</h3>
+    <p>class를 통해 만들어진 새로운 object를 확인할 때 사용 >> true, false를 return</p>
+    <p>모든 object는 Object를 상속한 것! >> 어떤 object던 Object를 상속해 overwriting 할 수 있음.</p>
+    <br>
+
+
+    <p>--------------------------------------------------------------------------------------------------------------</p>
+    <br>
+    <br>
 
 
 
