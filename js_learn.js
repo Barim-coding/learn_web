@@ -158,7 +158,6 @@ function calculate(command, a, b) {
             console.log(a * b);
         default:
             throw Error('unknown command');
-        case
     };
 };
 
