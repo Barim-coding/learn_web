@@ -32,8 +32,8 @@ array.unshift(var); >> 맨 앞 데이터 추가
 Del
 array.pop(); >> 맨 뒤 index의 데이터 삭제
 array.shift(); >> 맨 앞 index의 데이터 삭제
-array.splice(start-index, count); >> index의 데이터 삭제, count를 생략할 경우 start-index 부터 모두 삭제
 
+array.splice(start-index, count); >> index의 데이터 삭제, count를 생략할 경우 start-index 부터 모두 삭제
 array.splice(start-index, count, var1, var2); >> start-index 부터 count만큼 삭제 후 var1, 2를 추가
 
 array.concat(array1); >> array에 array1의 요소를 추가
